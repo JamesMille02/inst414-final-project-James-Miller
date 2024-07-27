@@ -56,25 +56,43 @@ Structure:
 ├── etl/
 
 │   ├── extract
+
 │   │   ├── netflix_added
+
 │   │   │  ├── added_2014.py
+
 │   │   │  ├── added_2015.py
+
 │   │   │  ├── added_2016.py
+
 │   │   │  ├── added_2017.py
+
 │   │   │  ├── added_2018.py
+
 │   │   │  ├── added_2019.py
+
 │   │   │  ├── added_2020.py
+
 │   │   │  ├── added_2021.py
+
 │   │   │  ├── added_2022.py
+
 │   │   │  ├── added_2023.py
+
 │   │   │  ├── added_2024.py
+
 │   │   │  ├── combine.py
+
 │   │   ├── ratings_extraction.py
 
 │   ├── transform
+
 │   │   ├── golden_globe_trans.py
+
 │   │   ├── oscars_combine.py
+
 │   │   ├── ratings_combine.py
+
 │   │   ├── genre_combine.py
 
 │   ├── load.py
