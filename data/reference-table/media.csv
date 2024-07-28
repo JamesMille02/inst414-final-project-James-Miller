@@ -1,0 +1,3 @@
+﻿attribute_name,description,data_type,example_vaue,unit
+media,name of media,char,The Office,None
+date_added,year released,char,Jan-14,None

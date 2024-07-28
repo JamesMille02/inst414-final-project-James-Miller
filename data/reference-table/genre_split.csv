@@ -1,0 +1,4 @@
+﻿attribute_name,description,data_type,example_vaue,unit
+genre,genre of film,Char,Comedy,none
+count,count of film added in genre,int,32,none
+year,year added to netflix ,Year,2018,none

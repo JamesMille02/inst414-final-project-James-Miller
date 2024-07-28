@@ -1,0 +1,7 @@
+attribute_name,description,data_type,example_vaue,unit
+media,name of film,char,the office,none
+date_added,date added to netflix,year,Jun-18,none
+averageRating,rating of film,float,4.5,none
+numVotes,number of raters,float,3432,none
+genres,genre of film,char,Action,none
+

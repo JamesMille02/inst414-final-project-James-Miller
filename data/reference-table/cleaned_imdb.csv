@@ -1,0 +1,12 @@
+attribute_name,description,data_type,example_vaue,unit
+tconst,id,id,tt0000001,None
+titleType,kind of title,char,short,None
+PrimaryTitle,title commonly known as,char,the office,None
+OriginalTitle,title given at release,char,the  office,None
+isAdult,rating,Int,0,None
+startYear,year the show started,Year,2012,None
+endYear,year the show ended,Year,2014,None
+runtimeMinutes,minues of program,int,90,None
+genres,media the genre is in,char,Action,None
+golden_globe_wins,number of golden globe wins, float, 1.0, none
+golden_globe_nomination,snumber of golden globe nominations, float, 1.0, none

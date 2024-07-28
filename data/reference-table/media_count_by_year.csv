@@ -1,0 +1,3 @@
+﻿attribute_name,description,data_type,example_vaue,unit
+year,year ofnetflix,YEAR,2018,none
+count,number of movies added to netflix that year,int,923,none
