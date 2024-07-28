@@ -15,7 +15,8 @@ Project Overview
         
             Used https://datasets.imdbws.com/title.ratings.tsv.gz and https://datasets.imdbws.com/title.basics.tsv.gz
 
-            **you need to download these files and put them into the data/extract folder after cloning. They are too big to commit**
+
+**you need to download the imdb files and put them into the data/extract folder after cloning. They are too big to commit**
             
     Techniques used:
     
