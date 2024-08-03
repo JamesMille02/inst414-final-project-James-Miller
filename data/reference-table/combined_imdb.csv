@@ -1,0 +1,9 @@
+attribute_name,description,data_type,example_vaue,unit
+primaryTitle,title of media,str,Miss Jerry,None
+startYear,the year of the film,YEAR,1999,None
+genres,genre of the media,str,Comedy,None
+runtimeMinutes,how long the media was,int,60,None
+averageRating,rating of the film,float,6.2,None
+numVotes,number of votes casted,int,112,None
+movie,if the media was a movie,boolean,1,None
+tvseries,if the media is a tvshow,boolean,1,None

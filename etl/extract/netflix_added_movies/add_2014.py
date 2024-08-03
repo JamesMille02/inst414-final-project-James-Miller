@@ -47,7 +47,7 @@ def jan_2014_add():
         file_exists = os.path.isfile(filename)
         
         # Prepare the data for the DataFrame
-        data = {'media': movies, 'date added': [month_year] * len(movies)}
+        data = {'media': movies, 'dateAdded': [month_year] * len(movies)}
         
         # Create a DataFrame
         df = pd.DataFrame(data)

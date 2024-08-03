@@ -62,7 +62,7 @@ def merge_media_with_ratings():
     merged_df = merged_df.drop_duplicates(subset=['media'])
     
     # Select and rename necessary columns
-    merged_df = merged_df[['media', 'date added', 'averageRating', 'numVotes', 'genres']]
+    merged_df = merged_df[['media', 'dateAdded', 'averageRating', 'numVotes', 'genres']]
     
     # Write the result to a new CSV file
     merged_df.to_csv(output_csv, index=False)
