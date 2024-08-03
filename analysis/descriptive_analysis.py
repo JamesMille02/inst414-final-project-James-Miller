@@ -37,11 +37,7 @@ def genre_split_by_year(df):
     
     return all_genres_counts
 
-def save_to_csv(df): 
-    """Saves the result to a CSV file."""
-    output_path = 'data/output/genre_split.csv'
-    # Save the DataFrame to a CSV file
-    df.to_csv(output_path, index=False)
+
 
 def read_csv(file_path):
     df = pd.read_csv(file_path)
@@ -91,9 +87,6 @@ def media_count_by_year(df):
     
     return media_counts
 
-def save_to_csv(df, output_path):
-    """Saves the result to a CSV file."""
-    df.to_csv(output_path, index=False)
 
 
 

@@ -36,9 +36,8 @@ imdb_df, netflix_df = load_datasets()
 from analysis.descriptive_analysis import *
 df = read_csv('data/output/final_netflix_dataset.csv')
 genre_splits = genre_split_by_year(df)
-save_to_csv(genre_splits,'data/output/genre_split_by_year.csv')
 
 media_counts = media_count_by_year(df)
-save_to_csv(media_counts, 'data/output/media_count_by_year.csv')
+
 
 
