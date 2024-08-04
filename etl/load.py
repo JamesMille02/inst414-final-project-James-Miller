@@ -9,7 +9,7 @@ def load_datasets():
     - netflix_df: DataFrame containing the final Netflix dataset.
     """
     # File paths
-    imdb_path = 'data/processed/imdb_dataset_with_awards.csv'
+    imdb_path = 'data/output/final_imdb_dataset.csv'
     netflix_path = 'data/output/final_netflix_dataset.csv'
     
     # Load the CSV files into DataFrames

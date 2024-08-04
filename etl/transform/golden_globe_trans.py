@@ -49,9 +49,3 @@ def add_awards_to_media_ratings():
     imdb_merged_df['wins'] = imdb_merged_df['wins'].fillna(0)
     imdb_merged_df.rename(columns={'wins': 'golden_globe_wins', 'nominations': 'golden_globe_nominations'}, inplace=True)
     imdb_merged_df.to_csv(imdb_output_csv, index=False)
-
-    print(f"Media ratings with awards saved to '{media_output_csv}'")
-    print(f"IMDb dataset with awards saved to '{imdb_output_csv}'")
-
-# Call the function to execute the process
-add_awards_to_media_ratings()

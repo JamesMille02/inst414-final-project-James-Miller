@@ -89,8 +89,7 @@ def clean_csv_columns():
     
     # Write the cleaned DataFrame to a new CSV file
     df_cleaned.to_csv(output_csv, index=False)
-    
-    print(f"Cleaned CSV saved to {output_csv}")
+
 
 
 def merge_imdb_oscar_awards():
@@ -169,7 +168,6 @@ def clean_imdb_csv_columns():
     # Write the cleaned DataFrame to a new CSV file
     df_cleaned.to_csv(output_csv, index=False)
     
-    print(f"Cleaned CSV saved to {output_csv}")
 
 
 

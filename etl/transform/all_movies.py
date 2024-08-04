@@ -7,11 +7,11 @@ def clean_film_names(df, column_name):
     leading/trailing whitespace, converting to lowercase, and removing special characters.
     
     Args:
-        df(dataFrame): The DataFrame containing the film names.
+        df (DataFrame): The DataFrame containing the film names.
         column_name (str): The name of the column to clean.
 
     Returns:
-        df(DataFrame): The DataFrame with cleaned film names 
+        df (DataFrame): The DataFrame with cleaned film names.
     """
     df[column_name] = df[column_name].fillna('')
     df[column_name] = df[column_name].astype(str).str.strip().str.lower()
@@ -64,9 +64,9 @@ def combine_and_filter_csv():
     # Add 'been_on_netflix' column
     final_df['been_on_netflix'] = final_df['primaryTitle'].isin(netflix_df['media']).astype(int)
     
+    # Drop duplicates
+    final_df = final_df.drop_duplicates()
+    
     # Save to CSV
     final_df.to_csv(output_path, index=False)
     
-    print(f"Final combined CSV saved to '{output_path}'")
-
-

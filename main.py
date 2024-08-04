@@ -1,4 +1,4 @@
-
+"""
 from etl.extract.downloadCSVs import *
 
 download_imdb_datasets()
@@ -30,14 +30,32 @@ clean_imdb_csv_columns()
 merge_oscar_awards()
 clean_csv_columns()
 
+from etl.transform.genre_match import *
+genre_mapping = process_genres(
+    imdb_path='data/output/final_imdb_dataset',
+    netflix_path='data/output/final_netflix_dataset.csv',
+    updated_imdb_path='data/output/final_imdb_data.csv',
+    updated_netflix_path='data/output/final_netflix_data.csv'
+)
+
+print("Genre mapping:", genre_mapping)
+"""
 from etl.load import *
 imdb_df, netflix_df = load_datasets()
-
+"""
 from analysis.descriptive_analysis import *
-df = read_csv('data/output/final_netflix_dataset.csv')
-genre_splits = genre_split_by_year(df)
 
-media_counts = media_count_by_year(df)
+# Perform analysis on Netflix dataset
+genre_splits = genre_split_by_year(netflix_df)
+plot_genre_split_pie_chart(genre_splits)
+readded_by_year, average_readded = count_added_movies_by_year('data/extracted/media.csv')
+plot_added_movies_by_year(readded_by_year, average_readded)
+"""
+from analysis.model import  *
 
+imdb_df, netflix_df, genre_to_id = preprocess_data(imdb_df, netflix_df)
+avg_characteristics = calculate_average_characteristics(netflix_df)
+recommendations_df = predict_movies_to_license(imdb_df, avg_characteristics)
 
-
+from analysis.evaluate import *
+evaluate_characteristics(recommendations_df, netflix_df)
