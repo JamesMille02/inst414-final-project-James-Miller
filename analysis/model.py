@@ -66,7 +66,7 @@ def calculate_distance_matrix(df, avg_characteristics):
     distances = np.sqrt(np.sum((df_numeric - avg_values) ** 2, axis=1))
     return distances
 
-def predict_movies_to_license(imdb_df, avg_characteristics, top_n=980):
+def predict_movies_to_license(imdb_df, avg_characteristics, top_n=980, save_path='model_recommendations.csv'):
     """
     Predict movies to license by calculating their distance from the average characteristics 
     and selecting the top N movies closest to the average.
@@ -75,6 +75,7 @@ def predict_movies_to_license(imdb_df, avg_characteristics, top_n=980):
         imdb_df (pd.DataFrame): The DataFrame containing IMDb movie data.
         avg_characteristics (pd.Series): A Series containing average characteristics for comparison.
         top_n (int): The number of top movies to select based on distance.
+        save_path (str): The path to save the CSV file with the model recommendations.
     
     Returns:
         pd.DataFrame: The top N recommended movies based on their distance from the average characteristics.
@@ -86,6 +87,11 @@ def predict_movies_to_license(imdb_df, avg_characteristics, top_n=980):
     recommendations = imdb_df.sort_values('distance_from_avg').head(top_n)
     
     print(f"Number of recommendations: {len(recommendations)}")
+    
+    # Save recommendations to CSV
+    recommendations.to_csv(save_path, index=False)
+    print(f"Recommendations saved to {save_path}")
+    
     return recommendations
 
 def evaluate_characteristics(recommendations_df, netflix_df):
