@@ -59,7 +59,7 @@ def plot_genre_split_pie_chart(df):
     plt.pie(genre_counts['count'], labels=genre_counts['genre'], autopct='%1.1f%%', startangle=140, colors=sns.color_palette('viridis', len(genre_counts)))
     plt.title('Genre Split for All Years Combined')
     plt.axis('equal')
-    plt.show()
+    plt.savefig('./vis/genre_split.png')
 
 def count_added_movies_by_year(file_path):
     """
@@ -110,4 +110,4 @@ def plot_added_movies_by_year(readded_by_year, average_readded):
     plt.legend()
     plt.xticks(rotation=90)
     plt.tight_layout()
-    plt.show()
+    plt.savefig('./vis/movies_added_year.png')
