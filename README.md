@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# inst414-final-project-James-Miller
 Project Overview
     Business Problem: The media that is added to Netflix can increase or decrease subscribers. With the cost of liscensing a movie being so high, determining the best media to is important for any streaming platform. The goal for this project is to answer the question of what is the best media to add and it will do this by determining the media to add based on past data and growth.
     
