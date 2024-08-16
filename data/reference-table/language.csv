@@ -1,0 +1,9 @@
+attribute_name,description,data_type,example_vaue,unit
+titleId,id for title,ID,tt0001,None
+ordering,number in file,int,1,None
+title,title of movie,str,Carmencita,None
+region,region of film,str,US,None
+language,language of film,str,ES,None
+types,Enumerated set of attributes for this alternative title,str,original,None
+attributes,Additional terms to describe this alternative title,str,\N,none
+isOriginalTitle,describes it title origin,bolean,0,None

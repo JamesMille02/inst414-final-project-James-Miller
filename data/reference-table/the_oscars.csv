@@ -1,0 +1,8 @@
+﻿attribute_name,description,data_type,example_vaue,unit
+year_film,year it was filmed,int,2022,none
+year_ceremony,year of ceremony,int,2021,none
+Ceremony,ceremony number,int,1,none
+category,nomination category,char,picture,none
+nominee,actor nominated,char,Frank Sinatraa,none
+film,movie name,char,The Lost Weekend,none
+win, win or loss,boolean,TRUE,none

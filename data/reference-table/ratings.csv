@@ -1,0 +1,4 @@
+﻿attribute_name,description,data_type,example_vaue,unit
+tconst,id for movie,id,tt0000001,none
+averageRating,rating of media,float,5.4,none
+numVotes,number of votes casted,char,1212,none
