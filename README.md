@@ -28,17 +28,15 @@ Setup instructions:
     Clone the repository: click green code button, go to vscode, click github button on the side bar and paste the link into the top bar.
     
     Activate Venv: activate venv by typing .venv/Scripts/activate in the terminal.
+
+    Kaggle API:
+    
+        https://www.kaggle.com/docs/api
     
     Install dependencies:
     
-        Pandas: pip install Pandas
+        pip install -r requirements.txt
         
-        Numpy: pip install numpy
-        
-        Beautiful Soup: pip install beautifulsoup4
-        Regex: pip install regex
-        Sklearn: pip install scikit-learn
-        Matplotlib: pip install matplotlib
 Running the Project:
     To run code go to main file and run, the data sets in the /data files need to be deleted before running or it will add on the bottom of documents and change the expected csv files. If you need to run certain functions, surrond the chunks over unused functions in triple quotes, """functions""".
 
