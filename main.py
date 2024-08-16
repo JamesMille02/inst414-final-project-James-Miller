@@ -63,8 +63,8 @@ def main():
     genre_mapping = process_genres(
         imdb_path='data/output/final_imdb_dataset.csv',
         netflix_path='data/output/final_netflix_dataset.csv',
-        updated_imdb_path='data/output/final_imdb_data.csv',
-        updated_netflix_path='data/output/final_netflix_data.csv'
+        updated_imdb_path='data/processed/final_imdb_data.csv',
+        updated_netflix_path='data/processed/final_netflix_data.csv'
     )
     logger.info(f'Genre mapping completed: {genre_mapping}')
 
@@ -75,8 +75,8 @@ def main():
     logger.info('Performing descriptive analysis...')
     genre_splits = genre_split_by_year(netflix_df)
     plot_genre_split_pie_chart(genre_splits)
-    readded_by_year, average_readded = count_added_movies_by_year('data/extracted/media.csv')
-    plot_added_movies_by_year(readded_by_year, average_readded)
+    readded_by_year, average_readded, recent_avg_added= count_added_movies_by_year('data/extracted/media.csv')
+    plot_added_movies_by_year(readded_by_year, average_readded, recent_avg_added)
     logger.info('Descriptive analysis completed.')
 
     logger.info('Preprocessing data for model...')
@@ -88,6 +88,15 @@ def main():
     logger.info('Evaluating model recommendations...')
     evaluate_characteristics(recommendations_df, netflix_df)
     logger.info('Model evaluation completed.')
+
+    logger.info('Turning genres into strings...')
+    revert_genre_ids(recommendations_df, genre_to_id)
+    logger.info('Reverting genres')
+
+    logger.info('Recommendation genre creation...')
+    rec_df = read_csv('data\output\model_recommendations.csv')
+    genre_splits = genre_split(rec_df)
+    rec_plot_genre_split_pie_chart(genre_splits)
 
 if __name__ == "__main__":
     main()

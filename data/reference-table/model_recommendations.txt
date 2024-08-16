@@ -1,4 +1,3 @@
-﻿
 attribute_name,description,data_type,example_vaue,unit
 media,name of film,char,the office,none
 date_added,date added to netflix,year,Jun-18,none
